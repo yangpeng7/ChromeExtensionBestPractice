@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "ContentScriptExtension",
+  "description": "Content Script Extension",
+  "version": "1.0",
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
