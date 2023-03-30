@@ -1,0 +1,145 @@
+<html>
+  <!-- 加载此页面需要在manifest中配置web_accessible_resources -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <style>
+      html {
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(to right bottom, #e3fdf5, #ffe6fa);
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .easy-css-panel-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 20px;
+      }
+
+      .easy-css-panel-header-icon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+
+      .easy-css-panel-header-title {
+        font-size: 16px;
+        font-weight: 800;
+        color: #4e6e81;
+        cursor: move;
+      }
+
+      .easy-css-panel-header-close {
+        border: none;
+        background: url("../images/icon-close.png") no-repeat;
+        width: 20px;
+        height: 20px;
+        background-size: 100%;
+        cursor: pointer;
+      }
+
+      /* 增加可点击区域 */
+      .easy-css-panel-header-close:after {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 14px;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+      }
+
+      .easy-css-panel-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .easy-css-panel-content-box {
+        width: 280px;
+        height: 140px;
+        border: 1px dashed #f48484;
+        background-color: transparent;
+        position: relative;
+      }
+
+
+      .easy-css-panel-box-width-height {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -50px;
+        margin-top: -15px;
+        background-color: white;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        color: #000;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .easy-css-panel-code-copy {
+        width: 280px;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        background: #f48484c0;
+        color: #4d455d;
+        margin-top: 40px;
+        cursor: pointer;
+        transition: 0.2s all;
+      }
+
+      .easy-css-panel-code-copy:hover {
+        background: #f48484;
+        color: white;
+        transition: 0.2s all;
+      }
+
+      .easy-css-panel-code-copy:active {
+        transform: scale(0.98);
+        box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="easy-css-panel-header">
+      <img
+        class="easy-css-panel-header-icon"
+        id="easy-css-panel-header-icon"
+        src="../images/icon-48.png"
+      />
+      <span class="easy-css-panel-header-title" id="easy-css-panel-header-title"
+        >EasyColor</span
+      >
+      <button
+        id="easy-css-panel-header-close"
+        class="easy-css-panel-header-close"
+      ></button>
+    </div>
+    <div class="easy-css-panel-content">
+      <div id="easy-css-panel-content-box" class="easy-css-panel-content-box">
+
+        <div
+          id="easy-css-panel-box-width-height"
+          class="easy-css-panel-box-width-height"
+        ></div>
+
+      </div>
+
+      <button id="easy-css-panel-code-copy" class="easy-css-panel-code-copy">
+        Copy
+      </button>
+    </div>
+    <script src="panel.js"></script>
+  </body>
+</html>
